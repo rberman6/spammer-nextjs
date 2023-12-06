@@ -1,3 +1,6 @@
+import DeleteMessage from "./DeleteMessage.jsx";
+import LikeMessage from "./LikeMessage.jsx";
+
 export default function Message({ post }) {
   const colorArr = ["blue", "beige", "pink", "green"];
 
@@ -8,8 +11,14 @@ export default function Message({ post }) {
   let color = changeColor();
 
   return (
-    <div key={post.id} className={`${color}`}>
-      {post.text}
+    <div>
+      <div key={post.id} className={`${color}`}>
+        {post.text}
+        <div className="btn-container">
+          <LikeMessage post={post} />
+          <DeleteMessage post={post} />
+        </div>
+      </div>
     </div>
   );
 }

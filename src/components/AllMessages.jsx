@@ -12,7 +12,7 @@ export default async function AllMessages() {
   return (
     <div id="main-message-container">
       {posts.map((post) => {
-        return <Message post={post} />;
+        return <Message key={post.id} post={post} />;
       })}
     </div>
   );
