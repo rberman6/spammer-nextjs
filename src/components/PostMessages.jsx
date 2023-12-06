@@ -21,7 +21,7 @@ export default function PostMessages() {
       }),
     });
     const data = await response.json();
-    console.log(data);
+
     if (!data.success) {
       setError(data.error);
     } else {

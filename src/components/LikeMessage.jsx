@@ -7,7 +7,7 @@ export default function LikeMessage({ post }) {
   async function handleLike() {
     const response = await fetch(`${API_URL}/api/posts/${post.id}/likes`, {
       method: "POST",
-      cache: "no store",
+      cache: "no-store",
     });
     router.refresh();
   }
