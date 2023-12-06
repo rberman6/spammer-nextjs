@@ -33,7 +33,7 @@ button {
 .blue {
     background-color: rgb(221, 242, 249);
     border-radius: 5px;
-    min-height: 50px;
+    min-height: 70px;
     padding: 15px;
     
 }
@@ -41,21 +41,21 @@ button {
 .beige {
     background-color: rgb(254, 239, 213);
     border-radius: 5px;
-    min-height: 50px;
+    min-height: 70px;
     padding: 15px;
 }
 
 .pink {
     background-color: rgb(251, 231, 233);
     border-radius: 5px;
-    min-height: 50px;
+    min-height: 70px;
     padding: 15px;
 }
 
 .green {
     background-color: rgb(225, 253, 225);
     border-radius: 5px;
-    min-height: 50px;
+    min-height: 70px;
     padding: 15px;
 }
 
