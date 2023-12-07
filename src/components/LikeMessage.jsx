@@ -14,7 +14,7 @@ export default function LikeMessage({ post }) {
   return (
     <div>
       <div>{post.likes}</div>
-      <button onClick={handleLike}>Like</button>
+      <button onClick={handleLike}>👍</button>
     </div>
   );
 }

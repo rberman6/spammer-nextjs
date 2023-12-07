@@ -13,7 +13,7 @@ export default function DeleteMessage({ post }) {
 
   return (
     <div>
-      <button onClick={handleDelete}>Delete</button>
+      <button onClick={handleDelete}>🗑️</button>
     </div>
   );
 }

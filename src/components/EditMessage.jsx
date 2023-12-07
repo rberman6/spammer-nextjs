@@ -4,11 +4,11 @@ import { useRouter } from "next/navigation.js";
 import { useState } from "react";
 
 export default function EditMessage({ post, setIsEdit }) {
-  const [text, setText] = useState("");
+  const [text, setText] = useState(post.text);
   const router = useRouter();
 
   async function handleEdit(e) {
-    // e.preventDefault();
+    e.preventDefault();
     if (!text) {
       alert("Please enter/edit message!");
     } else {
@@ -22,7 +22,7 @@ export default function EditMessage({ post, setIsEdit }) {
         }),
       });
       const data = await response.json();
-      //   console.log(data);
+
       setIsEdit(false);
 
       router.refresh();
@@ -35,14 +35,14 @@ export default function EditMessage({ post, setIsEdit }) {
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleEdit}>
         <input
           type="text"
           onChange={(e) => setText(e.target.value)}
           value={text}
         />
         <div>
-          <button onClick={handleEdit} type="button">
+          <button onSubmit={handleEdit} type="submit">
             Edit post
           </button>
           <button onClick={handleCancel} type="button">
