@@ -12,15 +12,17 @@ export default async function AllComments({ post }) {
   return (
     <div>
       <Message post={post} />
-      <div className="comments-container">
-        {comments.map((comment) => {
-          return (
-            <div key={comment.id} className="comment-box">
-              <p>💬 {comment.text}</p>
-            </div>
-          );
-        })}
-      </div>
+      {comments.length > 0 && (
+        <div className="comments-container">
+          {comments.map((comment) => {
+            return (
+              <div key={comment.id} className="comment-box">
+                <p>💬 {comment.text}</p>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

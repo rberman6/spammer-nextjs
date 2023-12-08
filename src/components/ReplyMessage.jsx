@@ -35,14 +35,17 @@ export default function ReplyMessage({ post, isReply, setIsReply }) {
     <div>
       <div>
         {isReply ? (
-          <form onSubmit={handleReply}>
+          <form id="form-reply-container" onSubmit={handleReply}>
             <input
+              className="reply-box"
               type="text"
               value={commentReply}
               onChange={(e) => setCommentReply(e.target.value)}
             />
-            <button type="submit">Comment</button>
-            <button onClick={handleCancel} type="button">
+            <button className="reply-btn" type="submit">
+              Comment
+            </button>
+            <button className="reply-btn" onClick={handleCancel} type="button">
               Cancel
             </button>
           </form>

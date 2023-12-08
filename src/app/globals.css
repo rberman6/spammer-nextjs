@@ -60,6 +60,21 @@ button {
    
 }
 
+#btn-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+}
+
+.emoji-btn {
+    border-radius: 45%;
+    background-color: white;
+    border: none;
+    padding: 12px;
+}
+
+
 /* Comments style */
 .comments-container {
     margin-top: 5px;
@@ -68,6 +83,36 @@ button {
     border-radius: 5px;
     margin-left: 45px;
     width: 70%;
+}
+
+/* ReplyMessage styles */
+#form-reply-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.reply-box {
+    border-radius: 15px;
+    padding: 5px 10px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid rgb(148, 148, 148);
+}
+
+.reply-btn {
+    font-size: 13px;
+    background-color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 10px;
+}
+
+/* Likes styles */
+
+.likes-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
 }
 
 

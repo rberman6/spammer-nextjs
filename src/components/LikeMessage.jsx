@@ -12,9 +12,11 @@ export default function LikeMessage({ post }) {
     router.refresh();
   }
   return (
-    <div>
+    <div className="likes-container">
       <div>{post.likes}</div>
-      <button onClick={handleLike}>👍</button>
+      <button className="emoji-btn" onClick={handleLike}>
+        👍
+      </button>
     </div>
   );
 }

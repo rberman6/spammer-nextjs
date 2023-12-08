@@ -39,7 +39,9 @@ export default function PostMessages() {
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button>Post message</button>
+        <button className="post-message-btn" type="submit">
+          Post message
+        </button>
         <p>{error}</p>
       </form>
     </div>

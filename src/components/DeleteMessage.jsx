@@ -13,7 +13,9 @@ export default function DeleteMessage({ post }) {
 
   return (
     <div>
-      <button onClick={handleDelete}>🗑️</button>
+      <button className="emoji-btn" onClick={handleDelete}>
+        🗑️
+      </button>
     </div>
   );
 }

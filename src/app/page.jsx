@@ -4,10 +4,10 @@ import PostMessages from "../components/PostMessages.jsx";
 
 export default function Home() {
   return (
-    <div id="wrapper">
+    <main id="wrapper">
       <h1>Spammer</h1>
       <PostMessages />
       <AllMessages />
-    </div>
+    </main>
   );
 }

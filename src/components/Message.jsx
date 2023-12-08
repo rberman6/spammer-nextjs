@@ -6,29 +6,27 @@ import { useState } from "react";
 import ReplyMessage from "./ReplyMessage.jsx";
 
 export default function Message({ post }) {
-  // const colorArr = ["blue", "beige", "pink", "green"];
+  const colorArr = ["blue", "beige", "pink", "green"];
 
-  // function changeColor() {
-  //   let randomIndex = Math.floor(Math.random() * colorArr.length);
-  //   return colorArr[randomIndex];
-  // }
-  // let color = changeColor();
+  function changeColor() {
+    let randomIndex = Math.floor(Math.random() * colorArr.length);
+    return colorArr[randomIndex];
+  }
+  let color = changeColor();
 
   const [isEdit, setIsEdit] = useState(false);
   const [isReply, setIsReply] = useState(false);
 
   return (
     <div>
-      <div className="main-post-container">
-        <div key={post.id} className="green">
-          {isEdit ? (
-            <EditMessage post={post} setIsEdit={setIsEdit} />
-          ) : (
-            <div className="post-container">{post.text}</div>
-          )}
+      <div id="main-post-container" className={`${color}`}>
+        <div className="post-container">💬 {post.text}</div>
+        <div key={post.id} id="btn-container">
+          {isEdit ? <EditMessage post={post} setIsEdit={setIsEdit} /> : null}
           <LikeMessage post={post} />
           <DeleteMessage post={post} />
           <button
+            className="emoji-btn"
             type="button"
             onClick={(e) => {
               // e.stopPropagation();
@@ -44,7 +42,11 @@ export default function Message({ post }) {
               isReply={isReply}
             />
           ) : null}
-          <button type="button" onClick={(e) => setIsReply(true)}>
+          <button
+            className="emoji-btn"
+            type="button"
+            onClick={(e) => setIsReply(true)}
+          >
             ↩️
           </button>
         </div>
