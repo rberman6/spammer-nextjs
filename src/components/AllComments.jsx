@@ -6,6 +6,7 @@ export default async function AllComments({ post }) {
     cache: "no-store",
   });
   const data = await response.json();
+  console.log(data);
   const comments = data.comments;
 
   return (

@@ -38,7 +38,11 @@ export default function Message({ post }) {
             ✏️
           </button>
           {isReply ? (
-            <ReplyMessage post={post} setIsReply={setIsReply} />
+            <ReplyMessage
+              post={post}
+              setIsReply={setIsReply}
+              isReply={isReply}
+            />
           ) : null}
           <button type="button" onClick={(e) => setIsReply(true)}>
             ↩️
