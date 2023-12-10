@@ -26,7 +26,6 @@ export default function Message({ post }) {
           {isEdit ? <EditMessage post={post} setIsEdit={setIsEdit} /> : null}
           <button
             className="emoji-btn"
-            type="button"
             onClick={(e) => {
               // e.stopPropagation();
               setIsEdit(true);
@@ -41,11 +40,7 @@ export default function Message({ post }) {
               isReply={isReply}
             />
           ) : null}
-          <button
-            className="emoji-btn"
-            type="button"
-            onClick={(e) => setIsReply(true)}
-          >
+          <button className="emoji-btn" onClick={(e) => setIsReply(true)}>
             ↩️
           </button>
         </div>

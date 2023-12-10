@@ -46,7 +46,7 @@ export default function EditMessage({ post, setIsEdit }) {
           <button className="edit-btn" onSubmit={handleEdit} type="submit">
             Edit post
           </button>
-          <button className="edit-btn" onClick={handleCancel} type="button">
+          <button className="edit-btn" onClick={handleCancel}>
             Cancel
           </button>
         </div>

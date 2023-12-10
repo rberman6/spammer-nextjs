@@ -45,7 +45,7 @@ export default function ReplyMessage({ post, isReply, setIsReply }) {
             <button className="reply-btn" type="submit">
               Comment
             </button>
-            <button className="reply-btn" onClick={handleCancel} type="button">
+            <button className="reply-btn" onClick={handleCancel}>
               Cancel
             </button>
           </form>
