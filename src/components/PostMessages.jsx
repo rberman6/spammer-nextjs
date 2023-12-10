@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
 import { API_URL } from "../lib/API_URL.js";
+import { useState } from "react";
 import { useRouter } from "next/navigation.js";
 
 export default function PostMessages() {
@@ -34,6 +34,7 @@ export default function PostMessages() {
     <div>
       <form onSubmit={handleSubmit} id="form-container">
         <input
+          className="new-post-input"
           type="text"
           placeholder="Please enter message"
           value={text}

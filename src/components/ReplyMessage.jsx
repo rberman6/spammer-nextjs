@@ -37,7 +37,7 @@ export default function ReplyMessage({ post, isReply, setIsReply }) {
         {isReply ? (
           <form id="form-reply-container" onSubmit={handleReply}>
             <input
-              className="reply-box"
+              className="reply-input"
               type="text"
               value={commentReply}
               onChange={(e) => setCommentReply(e.target.value)}

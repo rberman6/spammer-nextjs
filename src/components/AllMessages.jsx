@@ -1,8 +1,5 @@
-// import API_URL from "./lib/API_URL.js";
 import { API_URL } from "../lib/API_URL.js";
 import AllComments from "./AllComments.jsx";
-import ReplyMessage from "./ReplyMessage.jsx";
-// import AllComments from "./AllComments.jsx";
 
 export default async function AllMessages() {
   const response = await fetch(`${API_URL}/api/posts`, { cache: "no-store" });

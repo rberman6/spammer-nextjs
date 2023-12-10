@@ -37,15 +37,16 @@ export default function EditMessage({ post, setIsEdit }) {
     <div>
       <form onSubmit={handleEdit}>
         <input
+          className="edit-input"
           type="text"
           onChange={(e) => setText(e.target.value)}
           value={text}
         />
-        <div>
-          <button onSubmit={handleEdit} type="submit">
+        <div id="btn-edit-container">
+          <button className="edit-btn" onSubmit={handleEdit} type="submit">
             Edit post
           </button>
-          <button onClick={handleCancel} type="button">
+          <button className="edit-btn" onClick={handleCancel} type="button">
             Cancel
           </button>
         </div>
