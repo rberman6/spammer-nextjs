@@ -57,6 +57,7 @@ export async function PUT(request, response) {
 export async function DELETE(request, response) {
   try {
     const { postId } = response.params;
+    // delete post Id in DB
     const post = await prisma.post.delete({
       where: {
         id: postId,
