@@ -1,13 +1,19 @@
-import { API_URL } from "@/lib/API_URL.js";
 import Message from "./Message.jsx";
+import { prisma } from "@/lib/prisma.js";
 
 export default async function AllComments({ post }) {
-  const response = await fetch(`${API_URL}/api/posts/${post.id}/comments`, {
-    cache: "no-store",
+  // const response = await fetch(`/api/posts/${post.id}/comments`, {
+  //   cache: "no-store",
+  // });
+  // const data = await response.json();
+  // console.log(data);
+  // const comments = data.comments;
+
+  const comments = await prisma.comment.findMany({
+    where: {
+      postId: post.id,
+    },
   });
-  const data = await response.json();
-  console.log(data);
-  const comments = data.comments;
 
   return (
     <div>

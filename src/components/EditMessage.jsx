@@ -1,5 +1,5 @@
 "use client";
-import { API_URL } from "@/lib/API_URL.js";
+
 import { useRouter } from "next/navigation.js";
 import { useState } from "react";
 
@@ -12,7 +12,7 @@ export default function EditMessage({ post, setIsEdit }) {
     if (!text) {
       alert("Please enter/edit message!");
     } else {
-      const response = await fetch(`${API_URL}/api/posts/${post.id}`, {
+      const response = await fetch(`/api/posts/${post.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

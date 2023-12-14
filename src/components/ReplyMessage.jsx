@@ -1,5 +1,5 @@
 "use client";
-import { API_URL } from "@/lib/API_URL.js";
+
 import { useRouter } from "next/navigation.js";
 import { useState } from "react";
 
@@ -9,7 +9,7 @@ export default function ReplyMessage({ post, isReply, setIsReply }) {
 
   async function handleReply(e) {
     e.preventDefault();
-    const response = await fetch(`${API_URL}/api/posts/${post.id}/comments`, {
+    const response = await fetch(`/api/posts/${post.id}/comments`, {
       method: "POST",
       cache: "no-store",
       headers: {
