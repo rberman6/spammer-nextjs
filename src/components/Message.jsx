@@ -3,18 +3,21 @@ import DeleteMessage from "./DeleteMessage.jsx";
 import EditMessage from "./EditMessage.jsx";
 import LikeMessage from "./LikeMessage.jsx";
 import ReplyMessage from "./ReplyMessage.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Message({ post }) {
   const [isEdit, setIsEdit] = useState(false);
   const [isReply, setIsReply] = useState(false);
+  const [color, setColor] = useState("");
 
-  function changeColor() {
+  useEffect(() => {
     const colorArr = ["blue", "beige", "pink", "green"];
     let randomIndex = Math.floor(Math.random() * colorArr.length);
-    return colorArr[randomIndex];
-  }
-  let color = changeColor();
+    let newColor = colorArr[randomIndex];
+    if (newColor !== color) {
+      setColor(newColor);
+    }
+  }, [color]);
 
   return (
     <div>

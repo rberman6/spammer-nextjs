@@ -1,7 +1,7 @@
 #wrapper {
   max-width: 1260px;
   width: 90%;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 /* PostMessage styles */
@@ -41,7 +41,7 @@
 }
 
 .post-container {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .blue {
@@ -93,7 +93,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   margin-left: 45px;
-  width: 70%;
+  width: 75%;
 }
 
 /* EditMessage styles */
@@ -101,10 +101,10 @@
 .edit-input {
   border-radius: 15px;
   padding: 5px 10px;
-  width: 200px;
-  height: 50px;
+  width: 180px;
+  height: 80px;
   border: 1px solid rgb(148, 148, 148);
-  margin-bottom: 5px;
+  margin: 15px 0;
 }
 
 #btn-edit-container {
@@ -120,7 +120,7 @@
   border: none;
   padding: 12px;
   background-color: rgb(221, 221, 247);
-  border: 1px solid black;
+  border: 1px solid rgb(60, 60, 60);
   color: rgb(58, 58, 58);
 }
 
@@ -133,23 +133,29 @@
 #form-reply-container {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   gap: 5px;
 }
 .reply-input {
   border-radius: 15px;
   padding: 5px 10px;
   width: 200px;
-  height: 50px;
+  height: 60px;
   border: 1px solid rgb(148, 148, 148);
+}
+.btn-reply-container {
+  display: flex;
+  gap: 4px;
 }
 
 .reply-btn {
   font-size: 13px;
   border-radius: 30px;
   border: none;
-  padding: 5px 10px;
+  padding: 12px;
   background-color: rgb(221, 221, 247);
-  border: 1px solid black;
+  border: 1px solid rgb(60, 60, 60);
   color: rgb(58, 58, 58);
 }
 
@@ -164,6 +170,21 @@
   align-items: center;
   gap: 4px;
 }
+
+/* MOBILE RESPONSIVE LAYOUT */
+@media (max-width: 480px) {
+  #form-container {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .error-msg {
+    margin-bottom: 8px;
+  }
+}
+
+/* Base styles */
 
 html {
   line-height: 1.15;

@@ -42,12 +42,14 @@ export default function ReplyMessage({ post, isReply, setIsReply }) {
               value={commentReply}
               onChange={(e) => setCommentReply(e.target.value)}
             />
-            <button className="reply-btn" type="submit">
-              Comment
-            </button>
-            <button className="reply-btn" onClick={handleCancel}>
-              Cancel
-            </button>
+            <div className="btn-reply-container">
+              <button className="reply-btn" type="submit">
+                Comment
+              </button>
+              <button className="reply-btn" onClick={handleCancel}>
+                Cancel
+              </button>
+            </div>
           </form>
         ) : null}
       </div>

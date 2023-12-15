@@ -43,7 +43,7 @@ export default function PostMessages() {
         <button className="post-message-btn" type="submit">
           Post message
         </button>
-        <p>{error}</p>
+        <p className="error-msg">{error}</p>
       </form>
     </div>
   );
