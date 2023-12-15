@@ -111,7 +111,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 4px;
+  gap: 7px;
 }
 
 .edit-btn {
@@ -147,7 +147,7 @@
 }
 .btn-reply-container {
   display: flex;
-  gap: 4px;
+  gap: 7px;
 }
 
 .reply-btn {
