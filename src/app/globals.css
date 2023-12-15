@@ -101,7 +101,7 @@
 .edit-input {
   border-radius: 15px;
   padding: 5px 10px;
-  width: 180px;
+  width: 220px;
   height: 80px;
   border: 1px solid rgb(148, 148, 148);
   margin: 15px 0;
@@ -140,7 +140,7 @@
 .reply-input {
   border-radius: 15px;
   padding: 5px 10px;
-  width: 200px;
+  width: 220px;
   height: 80px;
   border: 1px solid rgb(148, 148, 148);
   margin-bottom: 15px;
@@ -182,6 +182,14 @@
 
   .error-msg {
     margin-bottom: 8px;
+  }
+
+  .edit-input {
+    width: 180px;
+  }
+
+  .reply-input {
+    width: 200px;
   }
 }
 
