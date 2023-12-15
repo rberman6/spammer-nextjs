@@ -29,7 +29,7 @@
 
 .post-message-btn:hover {
   color: white;
-  background-color: rgb(31, 29, 29);
+  background-color: rgb(47, 44, 44);
 }
 
 /* Message & allMessages style */
@@ -126,7 +126,7 @@
 
 .edit-btn:hover {
   color: white;
-  background-color: rgb(31, 29, 29);
+  background-color: rgb(47, 44, 44);
 }
 
 /* ReplyMessage styles */
@@ -141,8 +141,9 @@
   border-radius: 15px;
   padding: 5px 10px;
   width: 200px;
-  height: 60px;
+  height: 80px;
   border: 1px solid rgb(148, 148, 148);
+  margin-bottom: 15px;
 }
 .btn-reply-container {
   display: flex;
@@ -161,7 +162,7 @@
 
 .reply-btn:hover {
   color: white;
-  background-color: rgb(31, 29, 29);
+  background-color: rgb(47, 44, 44);
 }
 /* Likes styles */
 
