@@ -20,6 +20,7 @@
 }
 
 .post-message-btn {
+  margin: 15px 0;
   padding: 15px 20px;
   border-radius: 30px;
   background-color: rgb(221, 221, 247);
